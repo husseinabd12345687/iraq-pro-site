@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<a href="https://www.dropbox.com/scl/fi/14q63lk8ojireyduai2qw/IRAQ_PRO_TEST.exe?rlkey=95wfawgg9a42ue5vv2ctftrmn&st=mxo2u60s&dl=1" class="floating-btn" download>
+    <i class="fas fa-download" style="margin-left: 8px;"></i> نسخة تجريبية
+</a>
+
+
+<body>
+  <header>
+    <div class="container">
+       <nav>
+  <ul>
+    <li><a href="#">الرئيسية</a></li>
+    <li><a href="#">من نحن</a></li>
+    <li><a href="#products">الخدمات</a></li> <!-- هذا هو التعديل -->
+<li class="dropdown">
+  <a href="#" id="contactToggle">تواصل معنا <i class="fas fa-chevron-down"></i></a>
+  <ul class="dropdown-menu" id="contactMenu">
+    <li><a href="https://www.instagram.com/zuf8b?igsh=MXp0Y21qdTczOTYx" target="_blank"><i class="fab fa-instagram"></i> إنستغرام</a></li>
+    <li><a href="https://www.facebook.com/people/%D8%B9%D8%B1%D8%A7%D9%82-%D8%A8%D8%B1%D9%88-Iraq-Pro/100093975866954/" target="_blank"><i class="fab fa-facebook"></i> فيسبوك</a></li>
+    <li><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i> يوتيوب</a></li>
+    <li><a href="https://wa.me/message/NQCNX4EFEIPHM1" target="_blank"><i class="fab fa-watssap"></i> وتساب</a></li>
+    <li><a href="mailto:info@example.com"><i class="fas fa-envelope"></i> البريد الإلكتروني</a></li>
+  </ul>
+</li>
+
+
+  </ul>
+</nav>
+
+    </div>
+</header>
+
+<section class="hero-curve">
+    <div class="content">
+        <h2>عراق برو للحلول البرمجية والتصميم الالكتروني</h2>
+        <p>مستقبل الأعمال التجارية والبرمجية</p>
+    </div>
+</section>
+  <section class="products" id="products">
+    <h2 class="section-title">الأنظمة المتوفرة</h2>
+    <div class="product-grid">
+    
+    <!-- بطاقة المنتج الأول -->
+    <div class="product-card">
+      <img src="images/restaurant.jpg" alt="نظام المطاعم">
+      <h3>المطاعم والكافيهات</h3>
+      <p>يوفر النظام إدارة عامة للمطاعم والكافيهات بصورة سهلة وسريعة.</p>
+    </div>
+
+    <!-- بطاقة المنتج الثاني -->
+    <div class="product-card">
+      <img src="images/supermarket.jpg" alt="نظام السوبرماركت">
+      <h3>محلات السوبرماركت</h3>
+      <p>تسريع عمليات البيع، إصدار الفواتير، ومراقبة الموظفين.</p>
+    </div>
+
+    <!-- بطاقة المنتج الثالث -->
+    <div class="product-card">
+      <img src="images/store.jpg" alt="المتجر الإلكتروني">
+      <h3>المتجر الإلكتروني</h3>
+      <p>إنشاء متجر إلكتروني وتطبيقات أندرويد وآيفون مع لوحة إدارة سهلة.</p>
+    </div>
+
+   <div class="product-card">
+      <img src="images/store1.jpg" alt="الاقساط">
+      <h3>ادارة الاقساط</h3>
+      <p>لادارة الاقساط اليومية اسبوعية شهرية سنوية بسهولة وسلاسة</p>
+    </div>
+     <div class="product-card">
+      <img src="images/store.jpg" alt="محلات الموبايلات">
+      <h3>محلات الموبايل</h3>
+      <p>لادارة محلات الموبايل ومراكز الصيانة </p>
+    </div>
+     <div class="product-card">
+      <img src="images/store.jpg" alt="محلات الملابس">
+      <h3>محلات الملابس</h3>
+      <p>لادارة محلات الملابس من القياسات والالوان وكمية كل نوع</p>
+    </div>
+         <div class="product-card">
+      <img src="images/store.jpg" alt="نظام الصيدليات والمذاخر">
+      <h3>الصيدليات والمذاخر</h3>
+      <p>لادارة حسابات الصيدليات والمذاخر من الاكسباير ونظام الوجبات</p>
+    </div>
+         <div class="product-card">
+      <img src="images/store.jpg" alt="العيادات ومراكز التجميل">
+      <h3>العيادات الطبية ومراكز التجميل</h3>
+      <p>ادارة العيادات الطبية ومراكز التجميل</p>
+    </div>
+  </div>
+</section>
+<script>
+  const toggle = document.getElementById('contactToggle');
+  const menu = document.getElementById('contactMenu');
+
+  toggle.addEventListener('click', function (e) {
+    e.preventDefault();
+    menu.classList.toggle('show');
+  });
+
+  // إغلاق القائمة عند الضغط خارجها
+  document.addEventListener('click', function (e) {
+    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+      menu.classList.remove('show');
+    }
+  });
+</script>
+<footer class="main-footer">
+  <div class="footer-top">
+    <div class="footer-section">
+      <h3>الصفحات</h3>
+      <ul>
+        <li><a href="#">الرئيسية</a></li>
+        <li><a href="#">من نحن</a></li>
+        <li><a href="#products">الأنظمة</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>نبذة عن الشركة</h3>
+      <p>شركة رائدة في مجال البرمجيات في العراق، نسعى دائمًا لتطوير أدواتنا وتحديث التقنيات التي نستخدمها للوصول لأعلى جودة ممكنة.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>تابعونا على</h3>
+      <ul>
+        <li><a href="#"><i class="https://www.facebook.com/people/%D8%B9%D8%B1%D8%A7%D9%82-%D8%A8%D8%B1%D9%88-Iraq-Pro/100093975866954/"></i> فيسبوك</a></li>
+        <li><a href="#"><i class="https://wa.me/message/NQCNX4EFEIPHM1"></i> وتساب</a></li>
+        <li><a href="#"><i class="https://www.instagram.com/zuf8b?igsh=MXp0Y21qdTczOTYx"></i> انستغرام</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section logo-section">
+      <img src="images/logo-footer.png" alt="شعار عراق برو">
+      <p><strong>عراق برو</strong> للحلول البرمجية والتصميم الإلكتروني</p>
+      <p><i class="fas fa-envelope"></i> info@iraq-pro.com</p>
+      <p><i class="fas fa-phone"></i> 07716283955 - 07714011491</p>
+      <p><i class="fas fa-map-marker-alt"></i> بغداد - الغزالية - شارع المركز</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 جميع الحقوق محفوظة لشركة <strong>عراق برو</strong>
+  </div>
+</footer>
+
+</body>
+</html>
